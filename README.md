@@ -1,6 +1,8 @@
 # X-Nav-JS-Calculadora
 Ejercicio de asignaturas de aplicaciones HTML5. Tema JavaScript. Calculadora binaria simple.
 
+http://afernandezb92.github.io/X-Nav-JS-Calculadora/
+
 ## Enunciado
 
 Escribe una aplicacion JavaScript que implemente una calculadora binaria simple. Esta calculadora sólo realizará sumas de números binarios de una cifra (esto es, 0 ó 1). La interfaz de usuario estará compuesta de los siguientes elementos:
