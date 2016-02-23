@@ -2,23 +2,28 @@
 <html>
 	<head>
 	<title>Calculadora Binaria Simple</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
 	<script>
-		
+		var op1;
 		function changer (id, newValue) {
 			var element = document.getElementById(id);
 			element.innerHTML = newValue;
 		}
-		function result(op, id){
+		function resul(id){
 			var value = document.getElementById(id);
-			var content = value.innerHTML;
-			var nums = content.split("+");
-			result = (parseInt(nums[0],2) + parseInt(nums[1],2)).toString(2);
-			changer(id, content + op + result);
+			var op2 = value.innerHTML;
+			result = (parseInt(op1,2) + parseInt(op2,2)).toString(2);
+			changer(id,result);
 		}
 		function put(op, id){
 			var value = document.getElementById(id);
 			var content = value.innerHTML;
-			changer(id, content + op);
+			changer(id, op);
+		}
+		function sum(id){
+			var value = document.getElementById(id);
+			op1 = value.innerHTML;
+			changer(id, op1);
 		}
 		function clear(id){
 			var element = document.getElementById(id);
@@ -28,11 +33,12 @@
 	</script>
 	</head>
 	<body>
-		<p><span id="calc"></span></p>
+		<p></p>
 		<p><span id="zero"></span> <a href="javascript:put('0', 'calc')">0</a>
 		<span id="one"></span> <a href="javascript:put('1', 'calc')">1</a>
-		<span id="sum"></span> <a href="javascript:put('+', 'calc')">+</a>
-		<span id="sum"></span> <a href="javascript:clear('calc')">C</a>
-		<span id="res"></span> <a href="javascript:result('=', 'calc')">=</a></p>
+		<span id="sum"></span> <a href="javascript:sum('calc')">+</a>
+		<span id="clear"></span> <a href="javascript:clear('calc')">C</a>
+		<span id="res"></span> <a href="javascript:resul('calc')">=</a>
+		<span id="calc"></span></p>
 	</body>	
 </html>
